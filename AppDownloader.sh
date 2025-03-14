@@ -18,7 +18,8 @@ for app in "${applications[@]}";
 					echo "Installing $app"
 					sudo dnf install "$app" -y 
 				       	if [ $? -eq 0 ]; then
-                        			echo "Download complete!" 
+						echo 
+                        			echo "Downloadng of $app complete!" 
 						else
 						echo "Error downloading $app"
                				 fi
