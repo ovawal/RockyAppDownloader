@@ -4,6 +4,16 @@
 # Prompts the user for apps and stores it array
 read -p "Which app(s) would you like to download? " -a applications
 
+# Validate  sudo credentials
+
+sudo -v
+
+if [ $? -ne 0 ];
+then 
+	echo "Sudo authentication failed. Exit code 1"
+	exit 1
+fi
+
 
 # Checks if any input was provided
 if [ ${#applications[@]} -eq 0  ]; then
