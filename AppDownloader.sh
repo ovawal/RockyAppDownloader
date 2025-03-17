@@ -24,7 +24,9 @@ fi
 # Downloads each application in the array if it exists 
 for app in "${applications[@]}";
 	do
-		if [ -n "$app" ]; then
+		echo "Checking if $app already installed...."
+		dnf info "$app"
+		if [ $? -eq 1]; then
 					echo "Installing $app"
 					sudo dnf install "$app" -y 
 				       	if [ $? -eq 0 ]; then
@@ -33,6 +35,8 @@ for app in "${applications[@]}";
 						else
 						echo "Error downloading $app"
                				 fi
+				 else
+					 echo "$app already installed"
 
 		fi
 	done
