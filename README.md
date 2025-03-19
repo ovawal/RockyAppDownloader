@@ -11,10 +11,11 @@
 **2. Edit your path variable**
 ```
 	Export  PATH="$PATH:$HOME/.local/bin"
-
+```
 **3. Make your script executable**
 ```
 	chmod +x ~/.local/bin/appdownloader
+```
 
 ## **Enjoy**
 
