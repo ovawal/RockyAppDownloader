@@ -19,5 +19,5 @@
 
 ## **Enjoy**
 
-### **For more bash scripts follow and leave a star :)***
+### **For more bash scripts follow and leave a star :)**
 
