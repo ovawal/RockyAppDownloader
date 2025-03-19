@@ -21,7 +21,7 @@ if [ ${#applications[@]} -eq 0  ]; then
 	exit 1
 fi
 
-# Downloads each application in the array if it exists 
+# Check if each app is already installed and downloads each application in the array 
 for app in "${applications[@]}";
 	do
 		echo "Checking if $app already installed...."
