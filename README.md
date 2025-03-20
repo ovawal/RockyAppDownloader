@@ -5,7 +5,7 @@
 
  **1. Download script to local machine then move it to ~/.local/bin**
 ```
-	/your/script/download/path mv ~/.local/bin
+	sudo mv /your/script/download/path  $HOME/.local/bin
 ```
 
 **2. Edit your path variable**
@@ -14,7 +14,7 @@
 ```
 **3. Make your script executable**
 ```
-	chmod +x ~/.local/bin/appdownloader
+	sudo chmod +x $HOME/.local/bin/appdownloader
 ```
 
 ## **Enjoy**
