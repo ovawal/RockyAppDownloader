@@ -1,7 +1,5 @@
-# **Easily download multiple apllications in RHEL, Rocky Linux and CentOS Systems**
-
-
-### Follow this prodeure to make the script executable
+# **Easily download multiple packages for Fedora / RHEL and Debian Systems**
+### Prodeure to execute script
 
  **1. Download script to local machine then move it to ~/.local/bin**
 ```
@@ -16,7 +14,7 @@
 ```
 	sudo chmod +x $HOME/.local/bin/appdownloader
 ```
-
+#### NOTE: Use exact package name(s)
 ## **Enjoy**
 
 ### **For more bash scripts follow and leave a star :)**
