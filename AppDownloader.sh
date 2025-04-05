@@ -5,7 +5,7 @@
 
 sudo -v
 
-if [ $? -ne 0 ];
+if [[ $? -ne 0 ]];
 then 
 	echo "Sudo authentication failed. "
 	exit 1
@@ -17,7 +17,7 @@ read -p "Which app(s) would you like to download? " -a applications
 
 # Checks for input 
 
-if [ ${#applications[@]} -eq 0  ]; then
+if [[ ${#applications[@]} -eq 0  ]]; then
 	echo "No application entered."
 	exit 1
 fi
@@ -44,7 +44,7 @@ for app in "${lowercase_app[@]}";
 			if dnf info "$app" &> /dev/null; then
 					echo "Installing $app ..."
 					sudo dnf install "$app" -y &> /dev/null 
-				       	if [ $? -eq 0 ]; then
+				       	if [[ $? -eq 0 ]]; then
                         			echo -e "\nDownloading of $app complete!" 
 					else
 						echo "Error downloading $app"
@@ -69,7 +69,7 @@ for app in "${lowercase_app[@]}";
 			if apt-cache show "$app" &> /dev/null; then
 					echo "Installing $app ..."
 					sudo apt-get install "$app" -y &> /dev/null 
-				       	if [ $? -eq 0 ]; then
+				       	if [[ $? -eq 0 ]]; then
                         			echo -e "\nDownloading of $app complete!" 
 						else
 						echo "Error downloading $app"
@@ -88,7 +88,7 @@ else
 	exit 1
 fi
 
-if [ $failures -eq 0 ]; then
+if [[ $failures -eq 0 ]]; then
 	echo "All apps installed successfully"
 	exit 0
 else
